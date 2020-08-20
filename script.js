@@ -38,18 +38,19 @@ runner.add(() => {
 
 
 /*Задание 2*/
-
-var oldArr = [1, 2, 3];
-var newArr = [];
-const forMap = (arr, cb) => {
-    for (let i = 0; i < arr.length; i++) {
-        cb(newArr[i] = oldArr[i]*3);
+const forMapMain = () => {
+    var oldArr = [1, 2, 3];
+    var newArr = [];
+    const forMap = (arr, cb) => {
+        for (let i = 0; i < arr.length; i++) {
+            cb(newArr[i] = oldArr[i] * 3);
+        }
     }
+    forMap(oldArr, (value) => console.log(value));
 }
 
-forMap(oldArr, (value) => console.log(value));
-console.log(oldArr);
-console.log(newArr);
+forMapMain();
+
 
 
 
