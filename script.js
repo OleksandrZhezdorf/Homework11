@@ -38,18 +38,31 @@ runner.add(() => {
 
 
 /*Задание 2*/
-const forMapMain = () => {
-    var oldArr = [1, 2, 3];
-    var newArr = [];
-    const forMap = (arr, cb) => {
-        for (let i = 0; i < arr.length; i++) {
-            cb(newArr[i] = oldArr[i] * 3);
-        }
+
+function mapExample(arr, callback) {
+    results = [];
+    for (i = 0; i < arr.length; i++) {
+        results.push(callback(arr[i]));
     }
-    forMap(oldArr, (value) => console.log(value));
+    return results;
+};
+
+var mapSum = function (x) {
+    x = x + 2*x;
+    return x;
 }
 
-forMapMain();
+var mapResult = mapExample([1, 2, 3, 4, 5], mapSum);
+console.log(mapResult);
+
+
+
+
+
+
+
+
+
 
 
 
